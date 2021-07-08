@@ -6,3 +6,122 @@
     padding: 0;
     font-family: $font-stack;
 }
+
+body{
+    background: $grey-dark;
+    color: $light-color;
+}
+
+header{
+    padding: 2vh 5vw;
+    text-align: center;
+    box-shadow: 0 .2em .5em $dark-color;
+    
+    h1{
+        text-transform: uppercase;
+        letter-spacing: .02em;
+    }
+}
+
+h1, h2{
+    font-family: $font-title;
+}
+
+section{
+    width: 85%;
+    margin: 5vh auto;
+
+    .posts{
+        padding: 3vh 3vw;
+        background: $dark-color;
+        border-radius: .5em;
+    }
+
+    h2{
+        font-weight: 400;
+        letter-spacing: .03em;
+        text-align: justify;
+    }
+
+    img{
+        width: 100%;
+        margin: 4vh 0;
+    }
+}
+
+main{
+    padding: 2vh 5vw;
+    text-align: center;
+    box-shadow: 0 -.2em .3em $dark-color; 
+}
+
+.switch-holder {
+    width: 30%;
+    margin: 4vh auto;
+    display: flex;
+    padding: .5em .8em;
+    border-radius: .7em;
+    box-shadow: -0.2em -0.2em .9em rgba($white,.2),
+                1em 1em 1.2em rgba($black, .3),
+                inset .7em .7em 1em rgba($white,.05),
+                inset 1em 1em .8em rgba($black, .3);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.switch-label{
+    svg{
+        font-size: large;
+    }
+}
+
+.switch-toggle {
+    height: 2.8em;
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        z-index: -2;
+    }
+
+    input[type="checkbox"] + label {
+        position: relative;
+        display: inline-block;
+        width: 6em;
+        height: 2.5em;
+        border-radius: 1em;
+        margin: 0;
+        cursor: pointer;
+        box-shadow: inset -0.1em -0.1em 0.6em rgba($white,.6),
+                    inset 1.2em 1.2em 1em rgba($black, .25);
+        
+    }
+
+    input[type="checkbox"] + label::before {
+        position: absolute;
+        content: 'DARK';
+        font-size: .8em;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: .08em;
+        line-height: 1.8em;
+        top: .6em;
+        left: .7em;
+        width: 3.8em;
+        height: 2.2em;
+        border-radius: .9em;
+        background: $grey-dark;
+        box-shadow: -.2em -.2em .7em rgba($white,.5),
+                    .2em .2em .7em rgba($black, .25);
+        transition: .3s ease-in-out;
+    }
+
+    input[type="checkbox"]:checked + label::before {
+        left: 50%;
+        content: 'LIGHT';
+        color: $black;
+        background-color: $white;
+        box-shadow: -.2em -.2em .7em rgba($white,.5),
+                    .2em .2em .7em $white;
+    }
+}
