@@ -1,0 +1,21 @@
+{
+  "name": "dark-or-light-view",
+  "version": "1.0.0",
+  "description": "Create a landing page whose display depends on the user's point of view ... or his bias",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alice-sebego/dark-or-light-view.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alice-sebego/dark-or-light-view/issues"
+  },
+  "homepage": "https://github.com/alice-sebego/dark-or-light-view#readme",
+  "dependencies": {}
+}
