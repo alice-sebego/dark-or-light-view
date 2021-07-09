@@ -23,10 +23,10 @@ const posts = {
     junior : {
         title : "Les juniors, sérieux !?!",
         pessimistic : "Sans façon ! Trop de freins : Entre le manque d'expérience et d'autonomie ...",
-        dark_img:"<div class='tenor-gif-embed' data-postid='21010459' data-share-method='host' data-width='100%' data-aspect-ratio='1.2607594936708861'><a href='https://tenor.com/view/experience-need-experience-need-job-need-experience-for-job-need-job-for-experience-gif-21010459'>Experience Need Experience GIF</a> from <a href='https://tenor.com/search/experience-gifs'>Experience GIFs</a></div><script type='text/javascript' async src='https://tenor.com/embed.js'></script>",
+        dark_img:"dist/assets/need-experience-for-job-need-job-for-experience.gif",
         alt_dark:"Need experience for job, need job for experience",
         optimistic:"\"L'expérience de chacun est le trésor de tous.\" - Gérard de Nerval",
-        light_img:"<div class='tenor-gif-embed' data-postid='12511761' data-share-method='host' data-width='100%' data-aspect-ratio='1.371900826446281'><a href='https://tenor.com/view/this-is-how-we-bingham-treasure-hunt-treasure-got-it-happy-gif-12511761'>This Is How We Bingham Treasure Hunt GIF</a> from <a href='https://tenor.com/search/thisishowwebingham-gifs'>Thisishowwebingham GIFs</a></div><script type='text/javascript' async src='https://tenor.com/embed.js'></script>",
+        light_img:"dist/assets/l-experience-de-chacun-est-le tresor-de-tous.gif",
         alt_light:"La diversité dans une équipe nous vaccine des biais cognitifs ;)"
     },
 
