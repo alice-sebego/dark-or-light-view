@@ -1,5 +1,17 @@
+/**
+ * Handle contents and fill the DOM with these
+ * @class HandlePost
+ */
 export default class HandlePost{
 
+    /**
+     * @constructor
+     * @param {HTMLElement} section 
+     * @param {HTMLDivElement} toogle 
+     * @param {Object} contents 
+     * @param {HTMLElement} blockquote 
+     * @param {Object} text 
+     */
     constructor(section, toogle, contents, blockquote, text){
         this.section = section;
         this.toogle = toogle;
@@ -8,6 +20,10 @@ export default class HandlePost{
         this.text = text;
     }
 
+    /**
+     * Initialize contents and fill the DOM with these
+     * @function init
+     */
     init = () => {
         for(let [, val] of Object.entries(this.contents)){
         
@@ -15,7 +31,7 @@ export default class HandlePost{
             const viewPoint = document.createElement("div");
             viewPoint.setAttribute("class", "posts");
             viewPoint.setAttribute("data-aos","fade-up");
-            viewPoint.setAttribute("data-aos-offset","100");
+            viewPoint.setAttribute("data-aos-offset","150");
             viewPoint.setAttribute("data-aos-duration", "800");
             viewPoint.setAttribute("data-aos-easing", "ease-in-out-cubic");
             viewPoint.setAttribute("data-aos-delay", "200");
@@ -32,7 +48,10 @@ export default class HandlePost{
         this.blockquote.innerHTML = `${this.text.dark}`;
     }
 
-
+    /**
+     * Handle contents depending user's actions
+     * @function switchPosts
+     */
     switchPosts = () => {
         this.section.innerHTML = "";
 
@@ -45,7 +64,7 @@ export default class HandlePost{
                 const viewPoint = document.createElement("div");
                 viewPoint.setAttribute("class", "posts");
                 viewPoint.setAttribute("data-aos","fade-up");
-                viewPoint.setAttribute("data-aos-offset","100");
+                viewPoint.setAttribute("data-aos-offset","150");
                 viewPoint.setAttribute("data-aos-duration", "800");
                 viewPoint.setAttribute("data-aos-easing", "ease-in-out-cubic");
                 viewPoint.setAttribute("data-aos-delay", "200");
@@ -63,7 +82,7 @@ export default class HandlePost{
                 const viewPoint = document.createElement("div");
                 viewPoint.setAttribute("class", "posts");
                 viewPoint.setAttribute("data-aos","fade-up");
-                viewPoint.setAttribute("data-aos-offset","100");
+                viewPoint.setAttribute("data-aos-offset","150");
                 viewPoint.setAttribute("data-aos-duration", "800");
                 viewPoint.setAttribute("data-aos-easing", "ease-in-out-cubic");
                 viewPoint.setAttribute("data-aos-delay", "200");
