@@ -32,6 +32,7 @@ section{
     margin: 5vh auto;
 
     .posts{
+        margin: 5vh 0;
         padding: 3vh 3vw;
         background: $dark-color;
         border-radius: .5em;
@@ -40,7 +41,13 @@ section{
     h2{
         font-weight: 400;
         letter-spacing: .03em;
+    }
+
+    p{
+        margin: 1vh 0;
         text-align: justify;
+        font-size: 1.4em;
+        line-height: 1.6em;
     }
 
     img{

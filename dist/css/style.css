@@ -24,13 +24,18 @@ section {
   width: 85%;
   margin: 5vh auto; }
   section .posts {
+    margin: 5vh 0;
     padding: 3vh 3vw;
     background: #0f0f0f;
     border-radius: .5em; }
   section h2 {
     font-weight: 400;
-    letter-spacing: .03em;
-    text-align: justify; }
+    letter-spacing: .03em; }
+  section p {
+    margin: 1vh 0;
+    text-align: justify;
+    font-size: 1.4em;
+    line-height: 1.6em; }
   section img {
     width: 100%;
     margin: 4vh 0; }
