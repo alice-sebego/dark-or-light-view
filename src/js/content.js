@@ -35,15 +35,15 @@ const posts = {
         pessimistic : "La plupart d'eux est entrée dans le métier juste parce qu'ils ont vu de la lumière",
         dark_img:"dist/assets/developpeur-reconverti-avantage-ou-inconvenient-dark.jpg",
         alt_dark:"Une reconvertion professionnelle, fruit du hasard",
-        optimistic:"L'étrangeté n'est qu'une affaire de point de vue ou de référentiel Jean-Michel Calvez <br>Vous avez cliqué pour basculer en mode light, non ? Pourtant, je ne vous trouve ni étrange, ni bizarre",
+        optimistic:"L'étrangeté n'est qu'une affaire de point de vue ou de référentiel - Jean-Michel Calvez <br>Vous avez cliqué pour basculer en mode light, non ? Pourtant, je ne vous trouve ni étrange, ni bizarre",
         light_img:"dist/assets/developpeur-reconverti-avantage-ou-inconvenient-light.jpg",
         alt_light:"Une reconvertion professionnelle, fruit d'un choix de métier"
     }
 }
 
 const mainText = {
-    dark : "Noir c'est noir, <br>Il n'y a plus d'espoir <br>... ou pas !",
-    light: "On ne peut pas peindre du blanc sur du blanc, du noir sur du noir.<br>Nous sommes tous des révélateurs des uns et des autres.<br>Manu Dibango"
+    dark : "Noir c'est noir, <br>Il n'y a plus d'espoir <br><span class='author'>- Interprété par Johnny Hallyday</span>",
+    light: "On ne peut pas peindre du blanc sur du blanc, du noir sur du noir.<br>Nous sommes tous des révélateurs des uns et des autres.<br><span class='author'>- Manu Dibango</span>"
 }
 
 export { posts, mainText }

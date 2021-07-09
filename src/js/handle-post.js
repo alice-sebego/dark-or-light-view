@@ -1,9 +1,10 @@
 export default class HandlePost{
 
-    constructor(section, toogle, contents, text){
+    constructor(section, toogle, contents, blockquote, text){
         this.section = section;
         this.toogle = toogle;
         this.contents = contents;
+        this.blockquote = blockquote;
         this.text = text;
     }
 
@@ -26,8 +27,11 @@ export default class HandlePost{
             </picture>
             `;
             this.section.appendChild(viewPoint);
-        }  
+        }
+        
+        this.blockquote.innerHTML = `${this.text.dark}`;
     }
+
 
     switchPosts = () => {
         this.section.innerHTML = "";
@@ -53,7 +57,7 @@ export default class HandlePost{
                 </picture>
                 `;
                 this.section.appendChild(viewPoint);
-                
+                this.blockquote.innerHTML = `${this.text.dark}`;
             } else {
             
                 const viewPoint = document.createElement("div");
@@ -71,6 +75,7 @@ export default class HandlePost{
                 </picture>
                 `;
                 this.section.appendChild(viewPoint);
+                this.blockquote.innerHTML = `${this.text.light}`;
 
             }
         
