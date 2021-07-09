@@ -1,7 +1,7 @@
 const posts = {
     
     contrat : {
-        title : "Un contrat de professionnalisation",
+        title : "Un contrat de professionnalisation ?",
         pessimistic : "Ça coûtera cher à la boîte",
         dark_img:"dist/assets/contrat-professionnalisation-alternance-investissement.jpg",
         alt_dark:"Un contrat de professionnalisation est un investissement",
@@ -11,7 +11,7 @@ const posts = {
     },
 
     age : {
-        title : "41 ans !?!",
+        title : "41 ans !?",
         pessimistic : "Une galère qui s'intégrera pas à l'équipe donc non merci",
         dark_img:"dist/assets/diversite-age-dans-une-equipe-travail-dark.jpg",
         alt_dark:"Un élément de 41 ans dans une équipe de travail ?",
@@ -21,18 +21,18 @@ const posts = {
     },
 
     junior : {
-        title : "Les juniors, sérieux !?!",
+        title : "Les juniors, sérieux !",
         pessimistic : "Sans façon ! Trop de freins : Entre le manque d'expérience et d'autonomie ...",
         dark_img:"dist/assets/need-experience-for-job-need-job-for-experience.gif",
         alt_dark:"Need experience for job, need job for experience",
         optimistic:"\"L'expérience de chacun est le trésor de tous.\" - Gérard de Nerval",
         light_img:"dist/assets/l-experience-de-chacun-est-le tresor-de-tous.gif",
-        alt_light:"La diversité dans une équipe nous vaccine des biais cognitifs ;)"
+        alt_light:"L'expérience de chacun est le trésor de tous"
     },
 
     reconverti : {
         title : "Oula ! Une reconvertie",
-        pessimistic : "Oula ! La plupart d'eux est entré dans le métier juste parce qu'ils ont vu de la lumière",
+        pessimistic : "La plupart d'eux est entrée dans le métier juste parce qu'ils ont vu de la lumière",
         dark_img:"dist/assets/developpeur-reconverti-avantage-ou-inconvenient-dark.jpg",
         alt_dark:"Une reconvertion professionnelle, fruit du hasard",
         optimistic:"L'étrangeté n'est qu'une affaire de point de vue ou de référentiel Jean-Michel Calvez <br>Vous avez cliqué pour basculer en mode light, non ? Pourtant, je ne vous trouve ni étrange, ni bizarre",
