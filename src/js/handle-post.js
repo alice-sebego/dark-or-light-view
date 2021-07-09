@@ -13,6 +13,11 @@ export default class HandlePost{
             let {title, pessimistic, dark_img, alt_dark} = val;
             const viewPoint = document.createElement("div");
             viewPoint.setAttribute("class", "posts");
+            viewPoint.setAttribute("data-aos","fade-up");
+            viewPoint.setAttribute("data-aos-offset","100");
+            viewPoint.setAttribute("data-aos-duration", "800");
+            viewPoint.setAttribute("data-aos-easing", "ease-in-out-cubic");
+            viewPoint.setAttribute("data-aos-delay", "200");
             viewPoint.innerHTML = ` 
             <h2>${title}</h2>
             <p>${pessimistic}</p>
@@ -35,6 +40,11 @@ export default class HandlePost{
 
                 const viewPoint = document.createElement("div");
                 viewPoint.setAttribute("class", "posts");
+                viewPoint.setAttribute("data-aos","fade-up");
+                viewPoint.setAttribute("data-aos-offset","100");
+                viewPoint.setAttribute("data-aos-duration", "800");
+                viewPoint.setAttribute("data-aos-easing", "ease-in-out-cubic");
+                viewPoint.setAttribute("data-aos-delay", "200");
                 viewPoint.innerHTML = ` 
                 <h2>${title}</h2>
                 <p>${pessimistic}</p>
@@ -48,6 +58,11 @@ export default class HandlePost{
             
                 const viewPoint = document.createElement("div");
                 viewPoint.setAttribute("class", "posts");
+                viewPoint.setAttribute("data-aos","fade-up");
+                viewPoint.setAttribute("data-aos-offset","100");
+                viewPoint.setAttribute("data-aos-duration", "800");
+                viewPoint.setAttribute("data-aos-easing", "ease-in-out-cubic");
+                viewPoint.setAttribute("data-aos-delay", "200");
                 viewPoint.innerHTML = ` 
                 <h2>${title}</h2>
                 <p>${optimistic}</p>
