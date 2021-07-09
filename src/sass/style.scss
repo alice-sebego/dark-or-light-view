@@ -73,7 +73,7 @@ main{
 }
 
 .switch-holder {
-    width: 30%;
+    width: 40%;
     margin: 4vh auto;
     display: flex;
     padding: .5em .8em;
@@ -140,5 +140,22 @@ main{
         background-color: $white;
         box-shadow: -.2em -.2em .7em rgba($white,.5),
                     .2em .2em .7em $white;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .switch-holder{
+        width: 60%;
+        flex-direction: column;
+    }
+
+    .switch-label{
+        margin-bottom: 2vh;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .switch-holder{
+        width: 25%;
     }
 }

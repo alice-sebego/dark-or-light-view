@@ -52,7 +52,7 @@ main {
   box-shadow: 0 -0.2em 0.3em #0f0f0f; }
 
 .switch-holder {
-  width: 30%;
+  width: 40%;
   margin: 4vh auto;
   display: flex;
   padding: .5em .8em;
@@ -101,5 +101,16 @@ main {
     color: black;
     background-color: white;
     box-shadow: -0.2em -0.2em 0.7em rgba(255, 255, 255, 0.5), 0.2em 0.2em 0.7em white; }
+
+@media screen and (max-width: 700px) {
+  .switch-holder {
+    width: 60%;
+    flex-direction: column; }
+
+  .switch-label {
+    margin-bottom: 2vh; } }
+@media screen and (min-width: 1000px) {
+  .switch-holder {
+    width: 25%; } }
 
 /*# sourceMappingURL=style.css.map */
