@@ -3,7 +3,7 @@
  * @class HandlePost
  */
 export default class HandlePost{
-
+    viewPoint;
     /**
      * @constructor
      * @param {HTMLElement} section 
@@ -28,21 +28,16 @@ export default class HandlePost{
         for(let [, val] of Object.entries(this.contents)){
         
             let {title, pessimistic, dark_img, alt_dark} = val;
-            const viewPoint = document.createElement("div");
-            viewPoint.setAttribute("class", "posts");
-            viewPoint.setAttribute("data-aos","fade-up");
-            viewPoint.setAttribute("data-aos-offset","150");
-            viewPoint.setAttribute("data-aos-duration", "800");
-            viewPoint.setAttribute("data-aos-easing", "ease-in-out-cubic");
-            viewPoint.setAttribute("data-aos-delay", "200");
-            viewPoint.innerHTML = ` 
+            this.viewPoint = document.createElement("div");
+            this.setAttributePost();
+            this.viewPoint.innerHTML = ` 
             <h2>${title}</h2>
             <p>${pessimistic}</p>
             <picture>
                 <img src="${dark_img}" alt="${alt_dark}">
             </picture>
             `;
-            this.section.appendChild(viewPoint);
+            this.section.appendChild(this.viewPoint);
         }
         
         this.blockquote.innerHTML = `${this.text.dark}`;
@@ -61,44 +56,48 @@ export default class HandlePost{
         
             if(!this.toogle.checked){
 
-                const viewPoint = document.createElement("div");
-                viewPoint.setAttribute("class", "posts");
-                viewPoint.setAttribute("data-aos","fade-up");
-                viewPoint.setAttribute("data-aos-offset","150");
-                viewPoint.setAttribute("data-aos-duration", "800");
-                viewPoint.setAttribute("data-aos-easing", "ease-in-out-cubic");
-                viewPoint.setAttribute("data-aos-delay", "200");
-                viewPoint.innerHTML = ` 
+                this.viewPoint = document.createElement("div");
+                this.setAttributePost();
+                this.viewPoint.innerHTML = ` 
                 <h2>${title}</h2>
                 <p>${pessimistic}</p>
                 <picture>
                     <img src="${dark_img}" alt="${alt_dark}">
                 </picture>
                 `;
-                this.section.appendChild(viewPoint);
+                this.section.appendChild(this.viewPoint);
                 this.blockquote.innerHTML = `${this.text.dark}`;
+            
             } else {
             
-                const viewPoint = document.createElement("div");
-                viewPoint.setAttribute("class", "posts");
-                viewPoint.setAttribute("data-aos","fade-up");
-                viewPoint.setAttribute("data-aos-offset","150");
-                viewPoint.setAttribute("data-aos-duration", "800");
-                viewPoint.setAttribute("data-aos-easing", "ease-in-out-cubic");
-                viewPoint.setAttribute("data-aos-delay", "200");
-                viewPoint.innerHTML = ` 
+                this.viewPoint = document.createElement("div");
+                this.setAttributePost();
+                this.viewPoint.innerHTML = ` 
                 <h2>${title}</h2>
                 <p>${optimistic}</p>
                 <picture>
                     <img src="${light_img}" alt="${alt_light}">
                 </picture>
                 `;
-                this.section.appendChild(viewPoint);
+                this.section.appendChild(this.viewPoint);
                 this.blockquote.innerHTML = `${this.text.light}`;
 
             }
         
         }
+    }
+
+    /**
+     * Set attribute for each div of posts
+     * @function setAttributePost
+     */
+    setAttributePost = () => {
+        this.viewPoint.setAttribute("class", "posts");
+        this.viewPoint.setAttribute("data-aos","fade-up");
+        this.viewPoint.setAttribute("data-aos-offset","150");
+        this.viewPoint.setAttribute("data-aos-duration", "800");
+        this.viewPoint.setAttribute("data-aos-easing", "ease-in-out-cubic");
+        this.viewPoint.setAttribute("data-aos-delay", "200");
     }
 
 }
