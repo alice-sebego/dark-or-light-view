@@ -94,7 +94,7 @@ export default class HandlePost{
     setAttributePost = () => {
         this.viewPoint.setAttribute("class", "posts");
         this.viewPoint.setAttribute("data-aos","fade-up");
-        this.viewPoint.setAttribute("data-aos-offset","150");
+        this.viewPoint.setAttribute("data-aos-offset","100");
         this.viewPoint.setAttribute("data-aos-duration", "800");
         this.viewPoint.setAttribute("data-aos-easing", "ease-in-out-cubic");
         this.viewPoint.setAttribute("data-aos-delay", "200");
