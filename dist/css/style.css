@@ -12,13 +12,86 @@ html {
   html {
     scroll-behavior: auto; } }
 body {
-  background: #333;
-  color: #f5f4f4; }
+  --text-color: rgb(233, 230, 230);
+  --bkg-color: #333; }
+  body header {
+    --box-shadow: 0 .2em .5em rgb(15, 15, 15); }
+  body .posts {
+    --secondary-bkg-color: rgb(15, 15, 15); }
+  body main {
+    --box-shadow-main: 0 -.2em .3em rgb(15, 15, 15); }
+  body blockquote {
+    --border-top-bkqt: 1px solid rgb(173, 173, 173);
+    --border-bottom-bkqt: 1px solid rgb(173, 173, 173); }
+  body input[type="checkbox"] + label::before {
+    --bkg-input:#333; }
+
+body.light-theme {
+  --text-color: rgb(15, 15, 15);
+  --bkg-color: rgb(233, 230, 230); }
+  body.light-theme header {
+    --box-shadow: 0 .2em .5em rgb(173, 173, 173); }
+  body.light-theme .posts {
+    --secondary-bkg-color: #ddd; }
+  body.light-theme main {
+    --box-shadow-main: 0 -.2em .3em rgb(173, 173, 173); }
+  body.light-theme blockquote {
+    --border-top-bkqt: 1px solid #333;
+    --border-bottom-bkqt: 1px solid #333; }
+  body.light-theme input[type="checkbox"] + label::before {
+    --bkg-input:#ddd; }
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    --text-color: rgb(233, 230, 230);
+    --bkg-color: #333; }
+    body header {
+      --box-shadow: 0 .2em .5em rgb(15, 15, 15); }
+    body .posts {
+      --secondary-bkg-color: rgb(15, 15, 15); }
+    body main {
+      --box-shadow-main: 0 -.2em .3em rgb(15, 15, 15); }
+    body blockquote {
+      --border-top-bkqt: 1px solid rgb(173, 173, 173);
+      --border-bottom-bkqt: 1px solid rgb(173, 173, 173); }
+    body input[type="checkbox"] + label::before {
+      --bkg-input:#333; }
+
+  body.light-theme {
+    --text-color: rgb(15, 15, 15);
+    --bkg-color: rgb(233, 230, 230); }
+    body.light-theme header {
+      --box-shadow: 0 .2em .5em rgb(173, 173, 173); }
+    body.light-theme .posts {
+      --secondary-bkg-color: #ddd; }
+    body.light-theme main {
+      --box-shadow-main: 0 -.2em .3em rgb(173, 173, 173); }
+    body.light-theme blockquote {
+      --border-top-bkqt: 1px solid #333;
+      --border-bottom-bkqt: 1px solid #333; }
+    body.light-theme input[type="checkbox"] + label::before {
+      --bkg-input:#ddd; } }
+body {
+  background: var(--bkg-color); }
+  body header {
+    box-shadow: var(--box-shadow); }
+  body .posts {
+    background: var(--secondary-bkg-color); }
+  body main {
+    box-shadow: var(--box-shadow-main); }
+  body blockquote {
+    border-top: var(--border-top-bkqt);
+    border-bottom: var(--border-bottom-bkqt); }
+  body input[type="checkbox"] + label::before {
+    background: var(--bkg-input); }
+
+h1, h2, p, footer, footer a {
+  color: var(--text-color); }
 
 header {
   padding: 2vh 5vw;
-  text-align: center;
-  box-shadow: 0 0.2em 0.5em #0f0f0f; }
+  text-align: center; }
   header h1 {
     text-transform: uppercase;
     letter-spacing: .02em; }
@@ -32,7 +105,6 @@ section {
   section .posts {
     margin: 5vh 0;
     padding: 3vh 3vw;
-    background: #0f0f0f;
     border-radius: .5em; }
   section h2 {
     font-size: 3vw;
@@ -49,16 +121,13 @@ section {
 
 main {
   padding: 2vh 5vw;
-  text-align: center;
-  box-shadow: 0 -0.2em 0.3em #0f0f0f; }
+  text-align: center; }
   main blockquote {
     width: 50%;
     margin: 1vh auto;
     padding: 2vh 0;
     font-size: 1.8em;
-    font-style: italic;
-    border-top: 1px solid #adadad;
-    border-bottom: 1px solid #adadad; }
+    font-style: italic; }
   main .author {
     font-size: 0.7em;
     font-style: normal; }
@@ -105,7 +174,6 @@ main {
     width: 3.8em;
     height: 2.2em;
     border-radius: .9em;
-    background: #333;
     box-shadow: -0.2em -0.2em 0.7em rgba(255, 255, 255, 0.5), 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.25);
     transition: .3s ease-in-out; }
   .switch-toggle input[type="checkbox"]:checked + label::before {

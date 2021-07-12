@@ -7,25 +7,157 @@
     font-family: $font-stack;
 }
 
-html {
+html{
     scroll-behavior: smooth;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    html {
+    html{
       scroll-behavior: auto;
     }
 }
 
+// HANDLE DARK OR LIGHT MODE //
 body{
-    background: $grey-dark;
-    color: $light-color;
+    --text-color: rgb(233, 230, 230);
+    --bkg-color: #333;
+
+    header{
+        --box-shadow: 0 .2em .5em rgb(15, 15, 15);
+    }
+
+    .posts{
+       --secondary-bkg-color: rgb(15, 15, 15); 
+    }
+
+    main{
+       --box-shadow-main: 0 -.2em .3em rgb(15, 15, 15); 
+    }
+
+    blockquote{
+        --border-top-bkqt: 1px solid rgb(173, 173, 173);
+        --border-bottom-bkqt: 1px solid rgb(173, 173, 173);
+    }
+
+    input[type="checkbox"] + label::before{
+        --bkg-input:#333;
+    }
 }
+
+body.light-theme{
+    --text-color: rgb(15, 15, 15);
+    --bkg-color: rgb(233, 230, 230);
+
+    header{
+        --box-shadow: 0 .2em .5em rgb(173, 173, 173);
+    }
+
+    .posts{
+        --secondary-bkg-color: #ddd; 
+    }
+
+    main{
+        --box-shadow-main: 0 -.2em .3em rgb(173, 173, 173); 
+    }
+
+    blockquote{
+        --border-top-bkqt: 1px solid #333;
+        --border-bottom-bkqt: 1px solid #333;
+    }
+
+    input[type="checkbox"] + label::before{
+        --bkg-input:#ddd;
+    }
+}
+  
+@media (prefers-color-scheme: dark) {
+    /* defaults to dark theme */
+    body{
+        --text-color: rgb(233, 230, 230);
+        --bkg-color: #333;
+    
+        header{
+            --box-shadow: 0 .2em .5em rgb(15, 15, 15);
+        }
+    
+        .posts{
+           --secondary-bkg-color: rgb(15, 15, 15); 
+        }
+
+        main{
+            --box-shadow-main: 0 -.2em .3em rgb(15, 15, 15); 
+        }
+
+        blockquote{
+            --border-top-bkqt: 1px solid rgb(173, 173, 173);
+            --border-bottom-bkqt: 1px solid rgb(173, 173, 173);
+        }
+
+        input[type="checkbox"] + label::before{
+            --bkg-input:#333;
+        }
+    }
+
+    body.light-theme{
+        --text-color: rgb(15, 15, 15);
+        --bkg-color: rgb(233, 230, 230);
+    
+        header{
+            --box-shadow: 0 .2em .5em rgb(173, 173, 173);
+        }
+    
+        .posts{
+            --secondary-bkg-color: #ddd; 
+        }
+
+        main{
+            --box-shadow-main: 0 -.2em .3em rgb(173, 173, 173); 
+        }
+
+        blockquote{
+            --border-top-bkqt: 1px solid #333;
+            --border-bottom-bkqt: 1px solid #333;
+        }
+
+        input[type="checkbox"] + label::before{
+            --bkg-input:#ddd;
+        }
+    }
+
+}
+
+body{
+background: var(--bkg-color);
+
+    header{
+        box-shadow: var(--box-shadow);
+    }
+
+    .posts{
+        background: var(--secondary-bkg-color); 
+    }
+
+    main{
+        box-shadow: var(--box-shadow-main);
+    }
+    blockquote{
+        border-top: var(--border-top-bkqt);
+        border-bottom: var(--border-bottom-bkqt);
+    }
+
+    input[type="checkbox"] + label::before{
+        background: var(--bkg-input);
+    }
+}
+
+h1, h2, p, footer, footer a{
+    color: var(--text-color);
+}
+
 
 header{
     padding: 2vh 5vw;
     text-align: center;
-    box-shadow: 0 .2em .5em $dark-color;
     
     h1{
         text-transform: uppercase;
@@ -44,7 +176,6 @@ section{
     .posts{
         margin: 5vh 0;
         padding: 3vh 3vw;
-        background: $dark-color;
         border-radius: .5em;
     }
 
@@ -70,7 +201,6 @@ section{
 main{
     padding: 2vh 5vw;
     text-align: center;
-    box-shadow: 0 -.2em .3em $dark-color; 
 
     blockquote{
         width: 50%;
@@ -78,8 +208,6 @@ main{
         padding: 2vh 0;
         font-size: 1.8em;
         font-style: italic;
-        border-top: 1px solid $grey-light;
-        border-bottom: 1px solid $grey-light;
     }
 
     .author{
@@ -89,7 +217,7 @@ main{
 }
 
 // SWITCH INPUT FOR TOOGLE MODE //
-.switch-holder {
+.switch-holder{
     width: 40%;
     margin: 4vh auto;
     display: flex;
@@ -109,17 +237,17 @@ main{
     }
 }
 
-.switch-toggle {
+.switch-toggle{
     cursor: pointer;
     height: 2.8em;
 
-    input[type="checkbox"] {
+    input[type="checkbox"]{
         position: absolute;
         opacity: 0;
         z-index: -2;
     }
 
-    input[type="checkbox"] + label {
+    input[type="checkbox"] + label{
         position: relative;
         display: inline-block;
         width: 6em;
@@ -132,7 +260,7 @@ main{
         
     }
 
-    input[type="checkbox"] + label::before {
+    input[type="checkbox"] + label::before{
         position: absolute;
         content: 'DARK';
         font-size: .8em;
@@ -145,13 +273,13 @@ main{
         width: 3.8em;
         height: 2.2em;
         border-radius: .9em;
-        background: $grey-dark;
+        //@include theme('background-color', $general-background);
         box-shadow: -.2em -.2em .7em rgba($white,.5),
                     .2em .2em .7em rgba($black, .25);
         transition: .3s ease-in-out;
     }
 
-    input[type="checkbox"]:checked + label::before {
+    input[type="checkbox"]:checked + label::before{
         left: 50%;
         content: 'LIGHT';
         color: $black;
@@ -162,7 +290,7 @@ main{
 }
 
 // RESPONSIVE MANAGEMENT //
-@media screen and (max-width:700px) {
+@media screen and (max-width:700px){
     .switch-holder{
         width: 60%;
         flex-direction: column;
@@ -173,14 +301,14 @@ main{
     }
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1000px){
     .switch-holder{
         width: 25%;
     }
 
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width:800px){
     section{
         width: 50%;
     }
