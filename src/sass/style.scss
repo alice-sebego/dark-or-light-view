@@ -35,8 +35,13 @@ body{
     }
 
     blockquote{
+        --text-blockquote: rgb(233, 230, 230);
         --border-top-bkqt: 1px solid rgb(173, 173, 173);
         --border-bottom-bkqt: 1px solid rgb(173, 173, 173);
+    }
+
+    .switch-holder{
+        --text-switch: rgb(233, 230, 230);
     }
 
     input[type="checkbox"] + label::before{
@@ -61,8 +66,13 @@ body.light-theme{
     }
 
     blockquote{
+        --text-blockquote: rgb(15, 15, 15);
         --border-top-bkqt: 1px solid #333;
         --border-bottom-bkqt: 1px solid #333;
+    }
+
+    .switch-holder{
+        --text-switch: rgb(15, 15, 15);
     }
 
     input[type="checkbox"] + label::before{
@@ -89,8 +99,13 @@ body.light-theme{
         }
 
         blockquote{
+            --text-blockquote: rgb(233, 230, 230);
             --border-top-bkqt: 1px solid rgb(173, 173, 173);
             --border-bottom-bkqt: 1px solid rgb(173, 173, 173);
+        }
+
+        .switch-holder{
+            --text-switch: rgb(233, 230, 230);
         }
 
         input[type="checkbox"] + label::before{
@@ -115,8 +130,13 @@ body.light-theme{
         }
 
         blockquote{
+            --text-blockquote: rgb(15, 15, 15);
             --border-top-bkqt: 1px solid #333;
             --border-bottom-bkqt: 1px solid #333;
+        }
+
+        .switch-holder{
+            --text-switch: rgb(15, 15, 15);
         }
 
         input[type="checkbox"] + label::before{
@@ -140,13 +160,19 @@ background: var(--bkg-color);
     main{
         box-shadow: var(--box-shadow-main);
     }
+
     blockquote{
+        color: var(--text-blockquote);
         border-top: var(--border-top-bkqt);
         border-bottom: var(--border-bottom-bkqt);
     }
 
     input[type="checkbox"] + label::before{
         background: var(--bkg-input);
+    }
+
+    .switch-holder{
+        color: var(--text-switch);
     }
 }
 
@@ -204,7 +230,7 @@ main{
 
     blockquote{
         width: 50%;
-        margin: 1vh auto;
+        margin: 2vh auto;
         padding: 2vh 0;
         font-size: 1.8em;
         font-style: italic;
@@ -226,7 +252,7 @@ main{
     box-shadow: -0.2em -0.2em .9em rgba($white,.2),
                 1em 1em 1.2em rgba($black, .3),
                 inset .7em .7em 1em rgba($white,.05),
-                inset 1em 1em .8em rgba($black, .3);
+                inset 1em 1em .8em rgba($black, .1);
     justify-content: space-between;
     align-items: center;
 }
@@ -273,7 +299,6 @@ main{
         width: 3.8em;
         height: 2.2em;
         border-radius: .9em;
-        //@include theme('background-color', $general-background);
         box-shadow: -.2em -.2em .7em rgba($white,.5),
                     .2em .2em .7em rgba($black, .25);
         transition: .3s ease-in-out;
@@ -282,7 +307,6 @@ main{
     input[type="checkbox"]:checked + label::before{
         left: 50%;
         content: 'LIGHT';
-        color: $black;
         background-color: $white;
         box-shadow: -.2em -.2em .7em rgba($white,.5),
                     .2em .2em .7em $white;
@@ -301,15 +325,19 @@ main{
     }
 }
 
-@media screen and (min-width:1000px){
-    .switch-holder{
-        width: 25%;
-    }
-
-}
-
 @media screen and (min-width:800px){
     section{
         width: 50%;
     }
+}
+
+@media screen and (min-width:1000px){
+    section{
+        width: 38%;
+    }
+
+    .switch-holder{
+        width: 25%;
+    }
+
 }

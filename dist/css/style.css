@@ -21,8 +21,11 @@ body {
   body main {
     --box-shadow-main: 0 -.2em .3em rgb(15, 15, 15); }
   body blockquote {
+    --text-blockquote: rgb(233, 230, 230);
     --border-top-bkqt: 1px solid rgb(173, 173, 173);
     --border-bottom-bkqt: 1px solid rgb(173, 173, 173); }
+  body .switch-holder {
+    --text-switch: rgb(233, 230, 230); }
   body input[type="checkbox"] + label::before {
     --bkg-input:#333; }
 
@@ -36,8 +39,11 @@ body.light-theme {
   body.light-theme main {
     --box-shadow-main: 0 -.2em .3em rgb(173, 173, 173); }
   body.light-theme blockquote {
+    --text-blockquote: rgb(15, 15, 15);
     --border-top-bkqt: 1px solid #333;
     --border-bottom-bkqt: 1px solid #333; }
+  body.light-theme .switch-holder {
+    --text-switch: rgb(15, 15, 15); }
   body.light-theme input[type="checkbox"] + label::before {
     --bkg-input:#ddd; }
 
@@ -53,8 +59,11 @@ body.light-theme {
     body main {
       --box-shadow-main: 0 -.2em .3em rgb(15, 15, 15); }
     body blockquote {
+      --text-blockquote: rgb(233, 230, 230);
       --border-top-bkqt: 1px solid rgb(173, 173, 173);
       --border-bottom-bkqt: 1px solid rgb(173, 173, 173); }
+    body .switch-holder {
+      --text-switch: rgb(233, 230, 230); }
     body input[type="checkbox"] + label::before {
       --bkg-input:#333; }
 
@@ -68,8 +77,11 @@ body.light-theme {
     body.light-theme main {
       --box-shadow-main: 0 -.2em .3em rgb(173, 173, 173); }
     body.light-theme blockquote {
+      --text-blockquote: rgb(15, 15, 15);
       --border-top-bkqt: 1px solid #333;
       --border-bottom-bkqt: 1px solid #333; }
+    body.light-theme .switch-holder {
+      --text-switch: rgb(15, 15, 15); }
     body.light-theme input[type="checkbox"] + label::before {
       --bkg-input:#ddd; } }
 body {
@@ -81,10 +93,13 @@ body {
   body main {
     box-shadow: var(--box-shadow-main); }
   body blockquote {
+    color: var(--text-blockquote);
     border-top: var(--border-top-bkqt);
     border-bottom: var(--border-bottom-bkqt); }
   body input[type="checkbox"] + label::before {
     background: var(--bkg-input); }
+  body .switch-holder {
+    color: var(--text-switch); }
 
 h1, h2, p, footer, footer a {
   color: var(--text-color); }
@@ -124,7 +139,7 @@ main {
   text-align: center; }
   main blockquote {
     width: 50%;
-    margin: 1vh auto;
+    margin: 2vh auto;
     padding: 2vh 0;
     font-size: 1.8em;
     font-style: italic; }
@@ -138,7 +153,7 @@ main {
   display: flex;
   padding: .5em .8em;
   border-radius: .7em;
-  box-shadow: -0.2em -0.2em 0.9em rgba(255, 255, 255, 0.2), 1em 1em 1.2em rgba(0, 0, 0, 0.3), inset 0.7em 0.7em 1em rgba(255, 255, 255, 0.05), inset 1em 1em 0.8em rgba(0, 0, 0, 0.3);
+  box-shadow: -0.2em -0.2em 0.9em rgba(255, 255, 255, 0.2), 1em 1em 1.2em rgba(0, 0, 0, 0.3), inset 0.7em 0.7em 1em rgba(255, 255, 255, 0.05), inset 1em 1em 0.8em rgba(0, 0, 0, 0.1);
   justify-content: space-between;
   align-items: center; }
 
@@ -179,7 +194,6 @@ main {
   .switch-toggle input[type="checkbox"]:checked + label::before {
     left: 50%;
     content: 'LIGHT';
-    color: black;
     background-color: white;
     box-shadow: -0.2em -0.2em 0.7em rgba(255, 255, 255, 0.5), 0.2em 0.2em 0.7em white; }
 
@@ -190,11 +204,14 @@ main {
 
   .switch-label {
     margin-bottom: 2vh; } }
-@media screen and (min-width: 1000px) {
-  .switch-holder {
-    width: 25%; } }
 @media screen and (min-width: 800px) {
   section {
     width: 50%; } }
+@media screen and (min-width: 1000px) {
+  section {
+    width: 38%; }
+
+  .switch-holder {
+    width: 25%; } }
 
 /*# sourceMappingURL=style.css.map */
