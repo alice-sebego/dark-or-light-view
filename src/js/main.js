@@ -7,8 +7,8 @@ const $section = document.querySelector("section");
 const $switch = document.querySelector("#switch");
 const $citation = document.querySelector("main > blockquote");
 
+// Handle dark and light mode
 handleMode(window, localStorage, $body, $switch);
-
 
 // Lauch handle of post
 const app = new HandlePost($section, $switch, posts, $citation, mainText);
