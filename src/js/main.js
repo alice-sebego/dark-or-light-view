@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import { posts, mainText } from "./content.js";
 import HandlePost from "./handle-post.js";
 import { handleMode } from "./util.js";
