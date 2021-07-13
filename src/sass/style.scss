@@ -180,6 +180,7 @@ h1, h2, p, footer, footer a{
     color: var(--text-color);
 }
 
+// END OF HANDLE DARK OR LIGHT MODE //
 
 header{
     padding: 2vh 5vw;
@@ -206,7 +207,7 @@ section{
     }
 
     h2{
-        font-size: 3vw;
+        font-size: 4vw;
         font-weight: 400;
         letter-spacing: .03em;
     }
@@ -315,6 +316,19 @@ main{
 
 // RESPONSIVE MANAGEMENT //
 @media screen and (max-width:700px){
+    
+    section{
+        h2{
+            font-size: 5vw;
+        }
+    }
+    
+    main{
+        blockquote{
+            width: 70%;
+        }
+    }
+    
     .switch-holder{
         width: 60%;
         flex-direction: column;
