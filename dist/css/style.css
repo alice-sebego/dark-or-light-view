@@ -144,7 +144,7 @@ main {
     font-size: 1.8em;
     font-style: italic; }
   main .author {
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-style: normal; }
 
 .switch-holder {
@@ -197,6 +197,33 @@ main {
     background-color: white;
     box-shadow: -0.2em -0.2em 0.7em rgba(255, 255, 255, 0.5), 0.2em 0.2em 0.7em white; }
 
+footer {
+  border-top: 1px dotted rgba(245, 244, 244, 0.4);
+  padding: 3vh 5vw; }
+  footer #contacts {
+    margin: 2vh auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self: center;
+    column-gap: 10px;
+    row-gap: 15px; }
+    footer #contacts .contact {
+      padding: 2vh 2vw;
+      text-align: center;
+      box-shadow: 0.1em 0.1em 0.3em rgba(15, 15, 15, 0.25); }
+    footer #contacts h3 {
+      font-size: 5vw; }
+    footer #contacts a {
+      text-decoration: underline;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      font-weight: 700; }
+      footer #contacts a:hover {
+        text-decoration: overline dotted; }
+  footer p:last-child {
+    text-align: center;
+    padding: 3vh; }
+
 @media screen and (max-width: 700px) {
   section h2 {
     font-size: 5vw; }
@@ -209,13 +236,18 @@ main {
     flex-direction: column; }
 
   .switch-label {
-    margin-bottom: 2vh; } }
+    margin-bottom: 2vh; }
+
+  footer #contacts {
+    grid-template-columns: 1fr; } }
 @media screen and (min-width: 800px) {
   section {
     width: 50%; } }
 @media screen and (min-width: 1000px) {
   section {
     width: 38%; }
+    section h2 {
+      font-size: 3vw; }
 
   .switch-holder {
     width: 25%; } }

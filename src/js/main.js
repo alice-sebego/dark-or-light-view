@@ -21,3 +21,8 @@ $switch.addEventListener("change", () => {
 
 // Lauch AOS.js
 AOS.init();
+
+// Display current year on the footer
+const $year = document.querySelector("#year");
+const date = new Date(Date.now());
+$year.textContent = date.getFullYear();
