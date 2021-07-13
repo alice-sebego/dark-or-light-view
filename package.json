@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/alice-sebego/dark-or-light-view#readme",
   "dependencies": {
+    "classlist-polyfill": "^1.2.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
