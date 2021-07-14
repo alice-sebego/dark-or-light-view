@@ -2,7 +2,7 @@ const posts = {
     
     contrat : {
         title : "Un contrat de professionnalisation ?",
-        pessimistic : "Ça coûtera cher à la boîte",
+        pessimistic : "Hors de question ! Ça coûtera cher à la boîte",
         dark_img:"dist/assets/contrat-professionnalisation-alternance-investissement.jpg",
         alt_dark:"Un contrat de professionnalisation est un investissement",
         optimistic:"Après l'investissement vient le retour sur investissement",
@@ -32,7 +32,7 @@ const posts = {
 
     reconverti : {
         title : "Oula ! Un.e reconverti.e",
-        pessimistic : "La plupart d'eux est entrée dans le métier juste parce qu'ils ont vu de la lumière",
+        pessimistic : "La plupart d'entre eux est entrée dans le métier juste parce qu'ils ont vu de la lumière",
         dark_img:"dist/assets/developpeur-reconverti-avantage-ou-inconvenient-dark.jpg",
         alt_dark:"Une reconvertion professionnelle, fruit du hasard",
         optimistic:"L'étrangeté n'est qu'une affaire de point de vue ou de référentiel - Jean-Michel Calvez <br>Vous avez cliqué pour basculer en mode light, non ? Êtez-vous étrange pour autant ?",

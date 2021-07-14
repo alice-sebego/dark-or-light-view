@@ -131,7 +131,6 @@ section {
     letter-spacing: .03em; }
   section p {
     margin: 1vh 0;
-    text-align: justify;
     font-size: 1.4em;
     line-height: 1.6em; }
   section img {
@@ -221,8 +220,8 @@ footer {
       transition: transform .5s ease-in-out .5s; }
       footer #contacts .contact:hover {
         transform: scale(1.05); }
-    footer #contacts h3 {
-      font-size: 5vw; }
+    footer #contacts span {
+      font-size: 7vw; }
     footer #contacts a {
       text-decoration: underline;
       text-transform: uppercase;
