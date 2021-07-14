@@ -221,7 +221,8 @@ footer {
       text-decoration: underline;
       text-transform: uppercase;
       letter-spacing: .02em;
-      font-weight: 700; }
+      font-weight: 700;
+      transition: text-decoration 1.2s ease-in-out; }
       footer #contacts a:hover {
         text-decoration: overline dotted; }
   footer p:last-child {

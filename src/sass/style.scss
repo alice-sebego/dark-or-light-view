@@ -349,7 +349,8 @@ footer{
             text-transform: uppercase;
             letter-spacing: .02em;
             font-weight: 700;
-            
+            transition: text-decoration 1.2s ease-in-out;
+
             &:hover{
                 text-decoration: overline dotted;
             }

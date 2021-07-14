@@ -20,7 +20,7 @@ app.init();
 
 $switch.addEventListener("change", () => {
     app.switchPosts();
-    window.scrollTo(0, 0);
+    if (window.scrollY) window.scroll(0, 0);    
 });
 
 // Display current year on the footer
