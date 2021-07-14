@@ -264,6 +264,11 @@ main{
                 inset 1em 1em .8em rgba($black, .1);
     justify-content: space-between;
     align-items: center;
+    transition: transform .5s ease-in-out;
+
+    &:hover{
+        transform: scale3d(1.1, 1.1, 0.2);
+    }
 }
 
 .switch-label{
@@ -338,6 +343,11 @@ footer{
             padding: 2vh 2vw;
             text-align: center;
             box-shadow: .1em .1em .3em rgba($dark-color, .25);
+            transition: transform .5s ease-in-out .5s;
+
+            &:hover{
+                transform: scale(1.05);
+            }
         }
 
         h3{
@@ -349,7 +359,7 @@ footer{
             text-transform: uppercase;
             letter-spacing: .02em;
             font-weight: 700;
-            transition: text-decoration 1.2s ease-in-out;
+            transition: text-decoration 1.5s ease-in-out;
 
             &:hover{
                 text-decoration: overline dotted;
@@ -360,6 +370,7 @@ footer{
     p:last-child{
         text-align: center;
         padding: 3vh;
+        line-height: 2em;
     }
 }
 
