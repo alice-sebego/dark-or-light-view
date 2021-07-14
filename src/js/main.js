@@ -11,6 +11,9 @@ const $citation = document.querySelector("main > blockquote");
 // Handle dark and light mode
 handleMode(window, localStorage, $body, $switch);
 
+// Lauch AOS.js
+AOS.init();
+
 // Lauch handle of post
 const app = new HandlePost($section, $switch, posts, $citation, mainText);
 app.init();
@@ -19,9 +22,6 @@ $switch.addEventListener("change", () => {
     app.switchPosts();
     window.scrollTo(0, 0);
 });
-
-// Lauch AOS.js
-AOS.init();
 
 // Display current year on the footer
 const $year = document.querySelector("#year");

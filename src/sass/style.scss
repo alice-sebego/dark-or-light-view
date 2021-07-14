@@ -47,6 +47,10 @@ body{
     input[type="checkbox"] + label::before{
         --bkg-input:#333;
     }
+
+    img {
+        filter: brightness(.8) contrast(1.2);
+    }
 }
 
 body.light-theme{
@@ -110,6 +114,10 @@ body.light-theme{
 
         input[type="checkbox"] + label::before{
             --bkg-input:#333;
+        }
+
+        img {
+            filter: brightness(.8) contrast(1.2);
         }
     }
 
