@@ -23,6 +23,12 @@ $switch.addEventListener("change", () => {
     if (window.scrollY) window.scroll(0, 0);    
 });
 
+// Add attributes for each external link
+document.querySelectorAll("a").forEach( link => {
+     link.setAttribute("target", "_blank");
+     link.setAttribute("tabindex", "0");
+})
+
 // Display current year on the footer
 const $year = document.querySelector("#year");
 const date = new Date(Date.now());
