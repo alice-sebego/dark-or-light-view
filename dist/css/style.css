@@ -1,4 +1,6 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round&family=Source+Sans+Pro&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
@@ -105,7 +107,7 @@ body {
   body .switch-holder {
     color: var(--text-switch); }
 
-h1, h2, p, footer, footer a {
+h2, p, footer, footer a {
   color: var(--text-color); }
 
 header {
@@ -113,10 +115,24 @@ header {
   text-align: center; }
   header h1 {
     text-transform: uppercase;
-    letter-spacing: .02em; }
-
-h1, h2 {
-  font-family: "Crete Round", serif; }
+    letter-spacing: .08em; }
+    header h1::before {
+      font-family: "Font Awesome 5 Free";
+      content: "";
+      padding: 0.3em; }
+    header h1::after {
+      font-family: "Font Awesome 5 Free";
+      content: "";
+      padding: 0.3em; }
+  header .black {
+    font-family: "Crete Round", serif;
+    background-color: #0f0f0f;
+    font-weight: 500; }
+  header .white {
+    font-family: "Crete Round", serif;
+    background-color: #f5f4f4;
+    font-weight: 700;
+    color: #0f0f0f; }
 
 section {
   width: 85%;
@@ -128,7 +144,8 @@ section {
   section h2 {
     font-size: 4vw;
     font-weight: 400;
-    letter-spacing: .03em; }
+    letter-spacing: .03em;
+    font-family: "Crete Round", serif; }
   section p {
     margin: 1vh 0;
     font-size: 1.4em;

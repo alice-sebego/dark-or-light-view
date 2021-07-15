@@ -1,0 +1,11 @@
+@mixin handleCharacters($font-family, $color, $font-weight){
+    font-family: $font-title;
+    background-color: $color;
+    font-weight: $font-weight;
+}
+
+@mixin setFontAwesome($font-family, $content, $padding){
+    font-family: $font-family;
+    content:$content;
+    padding: $padding;
+}

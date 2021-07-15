@@ -1,4 +1,5 @@
 @import './base';
+@import './mixins';
 
 *, ::before, ::after{
     box-sizing: border-box;
@@ -184,7 +185,7 @@ background: var(--bkg-color);
     }
 }
 
-h1, h2, p, footer, footer a{
+h2, p, footer, footer a{
     color: var(--text-color);
 }
 
@@ -196,12 +197,26 @@ header{
     
     h1{
         text-transform: uppercase;
-        letter-spacing: .02em;
-    }
-}
+        letter-spacing: .08em;
 
-h1, h2{
-    font-family: $font-title;
+        &::before{
+            @include setFontAwesome($font-awesome-free,'\f185', .3em);
+        }
+
+        &::after{
+            @include setFontAwesome($font-awesome-free,'\f185', .3em);
+        }
+
+    }
+    
+    .black{ 
+        @include handleCharacters($font-title, $dark-color, 500);
+    }
+    
+    .white{
+        @include handleCharacters($font-title, $light-color, 700);
+        color: $dark-color;
+    }
 }
 
 section{
@@ -218,6 +233,7 @@ section{
         font-size: 4vw;
         font-weight: 400;
         letter-spacing: .03em;
+        font-family: $font-title;
     }
 
     p{
