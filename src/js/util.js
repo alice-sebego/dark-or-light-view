@@ -36,3 +36,14 @@
     });
 
 }
+
+/**
+ * Add target and tabindex attributes for each external link
+ * @param {HTMLCollection} elementsCollection 
+ */
+export const setAttributesLink = (elementsCollection) =>{
+    elementsCollection.forEach( link => {
+        link.setAttribute("target", "_blank");
+        link.setAttribute("tabindex", "0");
+   });
+}
